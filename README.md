@@ -38,20 +38,46 @@ Master WordNet fundamentals and advanced concepts for natural language processin
 
 ---
 
-### Day 2: 
-**Date:** 
+### Day 2: POS Tagging
+**Date:** January 25, 2026
 
 **Topics Covered:**
-
+- Part-of-Speech (POS) tagging fundamentals
+- NLTK POS tagger implementation
+- Analyzing ambiguous words in corpora
+- Working with Brown corpus
+- Understanding conditional frequency distributions
 
 **Key Concepts:**
-
+- `nltk.pos_tag(tokens)` - Tag words with parts of speech
+- `brown.tagged_words()` - Get pre-tagged corpus data
+- `ConditionalFreqDist` - Track tag frequencies per word
+- POS tags: PRP (pronoun), VBZ (verb), NN (noun), JJ (adjective), etc.
+- Ambiguous words - words that can serve multiple grammatical roles
 
 **Practice Done:**
+- Tagged a sample sentence
+- Analyzed Brown corpus news section
+- Found ambiguous words (words with multiple possible tags)
+- Calculated percentage of ambiguous words
 
+**Code Highlights:**
+```python
+# Basic POS tagging
+text = nltk.word_tokenize("she sells seashells on the seashore")
+print(nltk.pos_tag(text))
+
+# Finding ambiguous words
+brown_news_tagged = brown.tagged_words(categories='news')
+data = nltk.ConditionalFreqDist((word.lower(), tag) for (word, tag) in brown_news_tagged)
+```
 
 **Notes:**
-
+- POS tagging is crucial for understanding sentence structure
+- Many words are ambiguous - meaning depends on context
+- Brown corpus provides pre-tagged text for analysis
+- The code shows 10 example ambiguous words then calculates a ratio
+- Examples of ambiguous words: "primary" (NN/JJ), "said" (VBD/VBN)
 
 ---
 
@@ -77,8 +103,12 @@ pip install nltk
 import nltk
 nltk.download('wordnet')
 nltk.download('omw-1.4')
+nltk.download('averaged_perceptron_tagger_eng')
+nltk.download('punkt')
+nltk.download('brown')
 ```
 
 ## Files
 - `Word_Net_1.py` - Day 1: Synsets Basics
+- `POS.py` - Day 2: Part-of-Speech Tagging Demo
 - More files to be added as learning progresses...

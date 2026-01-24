@@ -7,6 +7,8 @@ from nltk.corpus import brown
 nltk.download('averaged_perceptron_tagger_eng', quiet=True)
 # Download the punkt tokenizer - needed to split sentences into individual words
 nltk.download('punkt', quiet=True)
+# Download the Brown corpus - a collection of text samples for linguistic research
+nltk.download('brown', quiet=True)
 
 # Break the sentence into a list of individual words (tokenization)
 text= nltk.word_tokenize("she sells seashells on the seashore")
@@ -25,3 +27,4 @@ for word in data.conditions():
         if count==10:
             break
 pr=round(count/len(data.conditions())*100,2)
+print(f"\nPercentage of ambigious words in brown news corpus: {pr} %")

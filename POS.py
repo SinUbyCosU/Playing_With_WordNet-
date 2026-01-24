@@ -1,3 +1,20 @@
+"""
+POS (Part-of-Speech) Tagging Demo
+
+What: This program demonstrates POS tagging - the process of labeling each word 
+      in a sentence with its grammatical role (noun, verb, adjective, etc.)
+
+Why:  POS tagging is fundamental to Natural Language Processing because:
+      - It helps understand sentence structure and meaning
+      - Many NLP tasks (parsing, sentiment analysis, etc.) rely on knowing word roles
+      - Some words can have different meanings based on their part of speech (ambiguity)
+      
+This code:
+1. Tags a simple sentence to show basic POS tagging
+2. Analyzes the Brown corpus to find ambiguous words (words that can serve 
+   multiple grammatical roles depending on context)
+"""
+
 # Import the Natural Language Toolkit library for text processing
 import nltk
 # Import the Brown corpus 

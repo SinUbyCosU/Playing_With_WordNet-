@@ -24,3 +24,4 @@ for word in data.conditions():
         count+=1
         if count==10:
             break
+pr=round(count/len(data.conditions())*100,2)

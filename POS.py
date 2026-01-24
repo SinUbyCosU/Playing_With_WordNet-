@@ -1,6 +1,6 @@
 # Import the Natural Language Toolkit library for text processing
 import nltk
-# Import the Brown corpus (though not used in this code)
+# Import the Brown corpus 
 from nltk.corpus import brown
 
 # Download the POS tagger model - needed to identify parts of speech like noun, verb, etc.
